@@ -43,11 +43,26 @@ function Compute(props) {
       return;
     }
 
-    props.setYears(
-      Math.abs(currentDate.getFullYear() - userDate.getFullYear() - 1)
-    );
-    props.setMonths(Math.abs(currentDate.getMonth() - userDate.getMonth()));
-    props.setDays(Math.abs(currentDate.getDate() - userDate.getDate()));
+    let years = currentDate.getFullYear() - userDate.getFullYear();
+    let months = currentDate.getMonth() - userDate.getMonth();
+    let days = currentDate.getDate() - userDate.getDate();
+
+    if (months < 0) {
+      years = years - 1;
+      months = 12 - Math.abs(months);
+    }
+
+    if (days < 0) {
+      months = months - 1;
+      days = 30 - Math.abs(days);
+      if (months < 0) {
+        years = years - 1;
+        months = 12 - Math.abs(months);
+      }
+    }
+    props.setYears(years);
+    props.setMonths(months);
+    props.setDays(days);
     props.setError("");
   };
 
