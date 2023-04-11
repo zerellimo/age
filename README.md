@@ -1,6 +1,6 @@
 # Age calculator app
 
-This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). 
+This is a solution to the [Age calculator app](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q) challenge on Frontend Mentor. 
 
 Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
